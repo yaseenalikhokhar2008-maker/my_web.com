@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Express Delivery</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fff8f0;
+        }
+
+        header {
+            background: #d62828;
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        .hero {
+            background: url('https://images.unsplash.com/photo-1601924582975-7e33e7f2b28c') center/cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero button {
+            padding: 12px 25px;
+            font-size: 18px;
+            background: #f77f00;
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .menu {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .menu h2 {
+            margin-bottom: 40px;
+        }
+
+        .pizza-grid {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .pizza-card {
+            background: white;
+            padding: 20px;
+            width: 250px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .pizza-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .pizza-card h3 {
+            margin: 15px 0 10px;
+        }
+
+        .pizza-card button {
+            padding: 8px 15px;
+            background: #d62828;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .cart {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #003049;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 30px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #d62828;
+            color: white;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🍕 Pizza Express</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <div class="cart">
+        🛒 Cart: <span id="cart-count">0</span>
+    </div>
+
+    <section class="hero">
+        <h2>Hot & Fresh Pizza Delivered Fast</h2>
+        <button onclick="scrollToMenu()">Order Now</button>
+    </section>
+
+    <section class="menu" id="menu">
+        <h2>Our Popular Pizzas</h2>
+        <div class="pizza-grid">
+
+            <div class="pizza-card">
+                <img src="https://images.unsplash.com/photo-1548365328-9f547fb0953d">
+                <h3>Margherita</h3>
+                <p>Rs.999</p>
+                <button onclick="addToCart()">Add to Cart</button>
+            </div>
+
+            <div class="pizza-card">
+                <img src="https://images.unsplash.com/photo-1594007654729-407eedc4be65">
+                <h3>Pepperoni</h3>
+                <p>Rs.1700</p>
+                <button onclick="addToCart()">Add to Cart</button>
+            </div>
+
+            <div class="pizza-card">
+                <img src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3">
+                <h3>Veggie Supreme</h3>
+                <p>Rs.1550</p>
+                <button onclick="addToCart()">Add to Cart</button>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Pizza Express Delivery | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        let cartCount = 0;
+
+        function addToCart() {
+            cartCount++;
+            document.getElementById("cart-count").innerText = cartCount;
+        }
+
+        function scrollToMenu() {
+            document.getElementById("menu").scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+
+</body>
+
+</html>

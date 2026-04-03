@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Atelier Noir | Culinary Excellence</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://googleapis.com" rel="stylesheet">
+</head>
+<style>
+    root {
+    --gold: #c5a059;
+    --dark-bg: #0a0a0a;
+    --card-bg: #141414;
+    --text-light: #e0e0e0;
+    --serif: 'Playfair Display', serif;
+    --sans: 'Montserrat', sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    font-family: var(--sans);
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(0,0,0,0.8);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-light);
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+/* Hero Section */
+.hero {
+    height: 90vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('https://unsplash.com');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding-left: 10%;
+}
+
+.hero-content h1 {
+    font-family: var(--serif);
+    font-size: 4rem;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+button {
+    padding: 12px 25px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.btn-primary { background: transparent; border: 1px solid white; color: white; margin-right: 15px; }
+.btn-secondary { background: var(--gold); border: none; color: black; font-weight: bold; }
+.cta-btn-outline { background: transparent; border: 1px solid var(--gold); color: var(--gold); }
+
+/* Welcome Section */
+.welcome-section {
+    padding: 100px 10%;
+    background-color: var(--card-bg);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.welcome-text h2 {
+    font-family: var(--serif);
+    color: var(--gold);
+    font-size: 2rem;
+}
+
+.welcome-img img {
+    width: 100%;
+    filter: brightness(0.8);
+    border-radius: 4px;
+}
+</style>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="logo">L'ATELIER NOIR</div>
+        <nav>
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">MENU</a></li>
+                <li><a href="#">RESERVATIONS</a></li>
+                <li><a href="#">GALLERY</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </nav>
+        <button class="cta-btn-outline">BOOK A TABLE</button>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Experience Culinary Excellence</h1>
+            <p>Indulge in an exquisite journey of French gastronomy where artistry meets flavor.</p>
+            <div class="hero-btns">
+                <button class="btn-primary">VIEW MENU</button>
+                <button class="btn-secondary">MAKE A RESERVATION</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Welcome Section -->
+    <section class="welcome-section">
+        <div class="container">
+            <div class="welcome-text">
+                <h2>WELCOME TO L'ATELIER NOIR</h2>
+                <p>Luxurious elegance and sophistication in Paris. Our kitchen is a laboratory of taste where tradition meets modern innovation.</p>
+                <a href="#" class="read-more">READ MORE &rarr;</a>
+            </div>
+            <div class="welcome-img">
+                <img src="https://unsplash.com" alt="Chef at work">
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
